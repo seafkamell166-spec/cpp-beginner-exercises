@@ -10,12 +10,12 @@ int main()
 	float average ;
 
 	cout << "enter your grades\n";
-	cin >> grade[1] >> grade[2] >> grade[3];
+	cin >> grade[0] >> grade[1] >> grade[2];
 
 
 
 
-	average = (grade[1] + grade[2] + grade[3]) / 3;
+	average = (grade[0] + grade[1] + grade[2]) / 3;
 
 	cout << "*******************************************\n";
 

@@ -8,7 +8,7 @@ int main()
 {
 	int pure[9];
 	cout << "enter the numbers of the array\n";
-	cin >> pure[9];
+	cin >> pure[0];
 	
 
 		return 0;

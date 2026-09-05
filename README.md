@@ -42,12 +42,13 @@ snake.exe
 - Writing and calling functions, including passing arrays and structs by reference
 - Basic terminal-based game logic (game loop, input handling, collision detection)
 
-## Honest Notes
-This is early learning code, kept as-found rather than cleaned up, so a few files have real bugs or are incomplete — useful context if you're reading through them:
-- `arrays-and-structs/array_average.cpp` indexes a 3-element array at positions 1–3 (should be 0–2) — an off-by-one bug.
-- `arrays-and-structs/salary_raise.cpp` uses `i == 9` as a loop condition instead of `i < 10`, so its loops never execute.
-- `functions/array_bounds_draft.cpp` reads into `array[9]` on a 9-element array (valid indices are 0–8) — an out-of-bounds write.
-- `arrays-and-structs/array_sum_draft.cpp` and `conditionals/hello_world_stub.cpp` / `loops/hello_world_stub.cpp` / `arrays-and-structs/hello_world_stub.cpp` are unfinished drafts (either fully commented out or left as the default "Hello World" template without the intended logic).
-- `conditionals/enum_favorite_club.cpp` reads an enum value that is never actually assigned from input, so it always takes the same branch.
+## Known Limitations
+This is early learning code, kept as-found rather than cleaned up. A handful of real bugs found during review have since been fixed (see commit history for the exact diffs):
+- `arrays-and-structs/array_average.cpp` indexed a 3-element array at positions 1–3 instead of 0–2 (off-by-one) — **fixed**.
+- `arrays-and-structs/salary_raise.cpp` used `i == 9` as a loop condition instead of `i < 10`, so its loops never executed — **fixed**.
+- `functions/array_bounds_draft.cpp` read into `array[9]` on a 9-element array (valid indices are 0–8), an out-of-bounds write — **fixed** (now reads into a valid index).
+- `conditionals/enum_favorite_club.cpp` never actually read the user's choice before comparing it, so it always took the same branch — **fixed** (now reads and converts the input).
 
-These are left intact rather than rewritten, since the point of this repository is to show real, honest progress while learning.
+A couple of files are still intentionally left as unfinished drafts rather than completed, since the point of this repository is to show real progress while learning, not a polished final product:
+- `arrays-and-structs/array_sum_draft.cpp` and `conditionals/hello_world_stub.cpp` / `loops/hello_world_stub.cpp` / `arrays-and-structs/hello_world_stub.cpp` are either fully commented out or left as the default "Hello World" template without the intended logic.
+- `functions/array_bounds_draft.cpp` (bug fixed above) still only reads a single value rather than looping over the whole array — it was left as a draft, not completed into a full array-input routine.
